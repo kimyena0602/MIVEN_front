@@ -1,4 +1,7 @@
 /* 이건 공통으로 사용되는 css 파일이야! */
+*{
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
 :root{
     --primary-color: #3998FF;/* 여기서 --primary-color는 변수 뒤에는 변수에 지정된 색상*/
     --white: #ffffff;
