@@ -1,0 +1,12 @@
+/* 이건 공통으로 사용되는 css 파일이야! */
+:root{
+    --primary-color: #3998FF;/* 여기서 --primary-color는 변수 뒤에는 변수에 지정된 색상*/
+    --font-color-white: #ffffff;
+    --font-color-black: #000000;
+    
+    --font1: 
+}
+/* 색상 가져올땐 
+ex) color: var(--primary-color); 
+이런 식으로 var() 괄호 안에 저 변수를 넣어주면 됨
+*/
