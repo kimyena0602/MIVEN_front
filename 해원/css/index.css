@@ -4,6 +4,9 @@ html, body{
     height: 100vh;
     width: 100vw;
 }
+html{
+    overflow: hidden;
+}
 .history{
     width: 100vw;
     height: 100vh;
@@ -14,10 +17,6 @@ html, body{
     height: 100vh;
     top: 0;
     z-index: -1;
-}
-video{
-    height: 100vh !important;
-    box-sizing: content-box;
 }
 .history-text{
     display: flex;
@@ -35,6 +34,7 @@ video{
     justify-content: center;
     align-items: center;
     height: 70vh;
+    width: 100vw;
     margin-top: 4vw;
 }
 .year-box,
@@ -61,6 +61,13 @@ video{
 .comming-soon{
     position: relative;
     top: -15%;
+}
+.year-box:hover,
+.comming-soon:hover{
+    transition: ease-in ;
+}
+@keyframes boxHover{
+    
 }
 .footer-bar{
     display: flex;
