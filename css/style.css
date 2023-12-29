@@ -14,6 +14,8 @@
 ex) color: var(--primary-color); 
 이런 식으로 var() 괄호 안에 저 변수를 넣어주면 됨
 */
+
+/* 이 코드는 스크롤바가 안보이게 하는 코드!! */
 ::-webkit-scrollbar{
     background-color: transparent;
 }
