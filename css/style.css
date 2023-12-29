@@ -1,5 +1,8 @@
 /* 이건 공통으로 사용되는 css 파일이야! */
-
+html,
+body{
+    margin: 0;
+}
 *{ /* '*' <- 이건 전체 요소에 적용한다는 표시야 */
     font-family: 'Zen Kaku Gothic New', sans-serif;
 }
