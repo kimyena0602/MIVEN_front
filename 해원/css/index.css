@@ -1,35 +1,33 @@
 html, body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100vh; /* 화면을 기준으로 높이의 100%를 차지함 / 100%와의 차이점 : %는 부모 요소를 기준으로 비율이 조정 됨, 만약 부모요소가 50%로 설정되어 있다면 자식 요소에 100%를 써도 전체 화면상으로는 50%밖에 차지를 안함!!*/
+    width: 100vw; /* 화면을 기준으로 너비의 100%를 차지함 */
 }
 html{
-    overflow: hidden;
+    overflow: hidden; /* 해당 클래스를 넘어가면 스크롤 되지 않고 숨김 */
 }
 .history{
     width: 100vw;
     height: 100vh;
 }
 .backgroud-video{
-    position: fixed;
+    position: fixed; /* 배경에 position: fixed를 해주면 배경은 고정되고 안에 요소만 스크롤 할 수 있음 */
     /* width: 100vw; */
     height: 100vh;
     top: 0;
-    z-index: -1;
+    z-index: -1; /* 레이어 개념으로 생각하면 됨! 배경이다보니 다른 요소들에 비해 더 밑에 위치해야하기 때문에 -1을 해주어 다른 요소들보다 밑에 위차할 수 있도록 함 */
 }
 .history-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* 요소를 가로 혹은 세로로 깔끔하게 정렬해 나열하고 싶을 때 사용!! 정말 많이 사용하는 코드임 */
+    justify-content: center; /* x축을 기준으로 가운데 정렬 / 반드시 display 설정을 해줘야 적용 됨 만약 이걸 쓰지 않고 가운데 정렬을 하고싶다면 margin: auto 0; 이런 식으로 작성하면 됨 */
+    align-items: center; /* y축을 기준으로 가운데 정렬 */
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* px과 다르게 화면을 기준으로 폰트의 크기가 달라짐 (반응형 폰트 개념) */
     margin-top: 5vh;
-    font-weight: bolder;
+    font-weight: bolder; /* 폰트의 두께 */
 }
 .year-container{
     display: flex;
-    column-gap: 20vw;
+    column-gap: 20vw; /* 예를들어 flex와 같이 정렬을 하고 요소 사이사이의 거리를 일정하게 주고싶으면 gap 속성을 사용하면 됨 */
     /* overflow-y: visible;
     overflow-x: scroll; */
     justify-content: center;
@@ -38,6 +36,23 @@ html{
     width: 100vw;
     margin-top: 4vw;
 }
+.year-container.original{
+	animation: rollingleft1 33s linear infinite;
+}
+.year-container.clone {
+	animation: rollingleft2 33s linear infinite;
+}
+@keyframes rollingleft1 {
+	0% { transform: translateX(0); }
+	50% { transform: translateX(-100%); }
+	50.01% { transform: translateX(100%); }
+	100% { transform: translateX(0); }
+}
+
+@keyframes rollingleft2 {
+	0% { transition: translateX(0); }
+	100% { transform: translateX(-200%); }
+}
 .year-box,
 .comming-soon{
     display: flex;
@@ -45,25 +60,30 @@ html{
     align-items: center;
     /* padding: 12vw; */
     color: var(--white);
-    font-size: 2rem;
+    font-size: 2.2rem;
     border: 1px solid var(--white);
     border-radius: 100%;
     max-height: 500px;
-    max-width: 500px !important;
+    max-width: 500px !important; /* !important는 다른 속성들에 의해 이 코드가 작동하지 않을때 이 코드를 적용되지 못하게 하는 속성들을 무시하고 이 속성이 적용되도록 하는 코드임 */
     min-width: 400px;
     min-height: 400px;
-    white-space: nowrap;
-    box-shadow: 0 0 60px rgba(255, 255, 255, 0.239), 0 0 60px rgba(255, 255, 255, 0.239) inset;
-    cursor: pointer;
+    white-space: nowrap; /* 컨텐츠가 요소에서 벗어났을 때 밑으로 내려가지 않고 쭉 나열되도록 하는 코드 즉 요소가 넘쳐 두줄이 되었을 때 한줄로 만들고 싶다면 쓰면 됨 */
+    box-shadow: 0 0 60px rgba(255, 255, 255, 0.239), 0 0 60px rgba(255, 255, 255, 0.239) inset; /* 이건 그림자 넣는 코드 */
+    cursor: pointer; /* 버튼이 아니지만 무언가를 클릭할 수 있을 때 사용자에게 더 쉽게 표시될 수 있도록 커서 모양을 버튼을 클릭할때와 같은 커서로 바꿔줌*/
 }
 .first-year{
-    position: relative;
+    position: relative; /* 부모 요소로 지정해줌, absolute 포지션이 이 relative 포지션을 기준으로 배치됨 */
     top: -7%
 }
 .comming-soon{
     position: relative;
     top: -15%;
-    cursor:auto;
+    cursor: auto;
+    /* margin-left: 20vw; */
+}
+.wrapper{
+    display: flex;
+    column-gap: 25vw;
 }
 .footer-bar{
     display: flex;
@@ -74,7 +94,7 @@ html{
 .footer-container{
     display: flex;
     flex-direction: column;
-    row-gap: 13px;
+    row-gap: 13px; /* 이건 column-gap과 반대되는 코드!! column-gap은 옆에 여백을 주지만 row는 영어 그대로 위 아래 여백을 넓혀줌 */
     /* margin-top: 1.5vw; */
     /* margin-top: 1.5%; */
     margin-top: 25px;
@@ -85,11 +105,11 @@ html{
     justify-content: center;
     align-items: center;
     color: var(--white);
-    min-width: 3.5vw;
+    min-width: 3.5vw; /* 반응형으로 만들때 사용하는 코드, 화면 비율이 아무리 작아저도 최소 3.5vw 크기는 돼야한다는 코드 */
     min-height: 3.5vw;
     font-size: 1.4rem;
     border: 1px solid var(--white);
-    border-radius: 100%;
+    border-radius: 100%; /* 테두리 둥글게 */
 }
 .line-container{
     display: flex;
@@ -103,7 +123,7 @@ html{
 }
 .sub-year{
     color: var(--white);
-    font-size: 0.8rem;
+    font-size: 1rem;
     white-space: nowrap;
 }
 .dot-container{
