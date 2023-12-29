@@ -30,7 +30,8 @@ html{
 .year-container{
     display: flex;
     column-gap: 20vw;
-    overflow-x: scroll;
+    /* overflow-y: visible;
+    overflow-x: scroll; */
     justify-content: center;
     align-items: center;
     height: 70vh;
@@ -53,6 +54,7 @@ html{
     min-height: 400px;
     white-space: nowrap;
     box-shadow: 0 0 60px rgba(255, 255, 255, 0.239), 0 0 60px rgba(255, 255, 255, 0.239) inset;
+    cursor: pointer;
 }
 .first-year{
     position: relative;
@@ -61,13 +63,7 @@ html{
 .comming-soon{
     position: relative;
     top: -15%;
-}
-.year-box:hover,
-.comming-soon:hover{
-    transition: ease-in ;
-}
-@keyframes boxHover{
-    
+    cursor:auto;
 }
 .footer-bar{
     display: flex;

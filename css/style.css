@@ -1,5 +1,6 @@
 /* 이건 공통으로 사용되는 css 파일이야! */
-*{
+
+*{ /* '*' <- 이건 전체 요소에 적용한다는 표시야 */
     font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 :root{
@@ -13,3 +14,6 @@
 ex) color: var(--primary-color); 
 이런 식으로 var() 괄호 안에 저 변수를 넣어주면 됨
 */
+::-webkit-scrollbar{
+    background-color: transparent;
+}
