@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
         clickedYearBox.style.transform = "scale(1000)";
         clickedYearBox.style.zIndex = 1;
         clickedYearBox.style.transition = "ease-in 18s";
-        clickedYearBox.style.transform = ""
     }
 });
 
