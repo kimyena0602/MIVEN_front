@@ -42,13 +42,15 @@ html{
 .year-container.clone {
 	animation: rollingleft2 33s linear infinite;
 }
+
+/* 기존에 있는 연도 박스가 오른쪽에서 왼쪽으로 이동하는 코드 */
 @keyframes rollingleft1 {
 	0% { transform: translateX(0); }
 	50% { transform: translateX(-100%); }
 	50.01% { transform: translateX(100%); }
 	100% { transform: translateX(0); }
 }
-
+/* 복제한 연도 박스가 연달아 이동하는 코드 */
 @keyframes rollingleft2 {
 	0% { transition: translateX(0); }
 	100% { transform: translateX(-200%); }
