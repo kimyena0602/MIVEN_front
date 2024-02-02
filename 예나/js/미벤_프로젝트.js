@@ -1,24 +1,7 @@
-const block = document.getElementById("video")
+import React from 'react';
+import { Link } from 'gatsby';
 
-function onVideoEnd() {
-    console.log("영상 끝남")
-  }
-  
-  video.addEventListener("ended",onVideoEnd)
-  $(window).on("load",function(){
-	
-    //윈도우 로드 시 비디오 플레이
-    $("#video").get(0).play();
-	
-    //작동하는지 콘솔창에서 확인
-    console.log("test");
-})
-    
-setInterval(function(){
-   if($("#video").prop("ended")){
-    
-    //영상종료 후 어떤행동을 할건지 작성
-    location.href="/http://127.0.0.1:3000/mivenproject";
-   
-   }
-},200);
+export default () => <>
+  <p>Miven 지원 페이지 입니다.</p>
+  <Link to='./mivenproject.html'>B 페이지 가기</Link>
+</>;
