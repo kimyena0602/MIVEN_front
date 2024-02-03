@@ -28,8 +28,8 @@
     position: absolute;
     top: 50px;
     right: 3%;
-    width: 47px;
-    height: 47px;
+    width: 40px;
+    height: 40px;
     color: #FFFFFF;
 }
 
@@ -39,14 +39,12 @@ h1 {
     height: 96px;
     left: calc(50% - 579px/2 - 0.5px);
     top: 183px;
-
-    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-family: 'Zen Kaku Gothic New';
     font-weight: 700;
     font-size: 60px;
     line-height: 160%;
     /* identical to box height, or 96px */
     text-align: center;
-
     color: #FFFFFF;
 }
 
