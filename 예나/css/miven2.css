@@ -50,7 +50,7 @@
     color: #3998FF85;
 }
 
-p{
+.button{
     line-height: 5px;
     position: absolute;
     width: 317px;
@@ -65,11 +65,28 @@ p{
     color: #000000;
 }
 
+button + button {
+
+    margin-left: 20;
+    
+    }
+
 #rtg {
     width: 1200px;
     height: 1080px;
     left: 349px;
     border: 1px;
     color: #3998FF85;
+}
+
+.button:hover,
+.button.active {
+  color: #3998FF;
+}
+.button:visited {
+    background-color: transparent;
+}
+.button {
+  border: 0;
 }
 
