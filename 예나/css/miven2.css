@@ -138,5 +138,20 @@ h5 {
 
 }
 
+hr {
+    width: 65.5em;
+    bottom: 6%;
+    height: 0.08px;
+    border: 0;
+    position: absolute;
+    background-color: #68b1ff;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+#icon {
+    
+}
+
 
 

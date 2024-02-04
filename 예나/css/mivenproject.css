@@ -48,8 +48,8 @@ h1 {
     color: #FFFFFF;
 }
 
-#Wellcome {
-    /* Wellcome */
+#Welcome {
+    /* Welcome */
     position: absolute;
     transform: translate(-50%, 0);
     top : 16%;
