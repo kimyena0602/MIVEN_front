@@ -107,6 +107,10 @@ button + button {
     
     }
 
+    .button.inactive {
+        color: gray; /* 선택되지 않은 버튼 텍스트 색상 */
+      }
+
 #rtg {
     height: 100%;
     border: 1px;
@@ -149,7 +153,14 @@ hr {
 }
 
 #icon {
-
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    left: 24%;
+    top: 94.6%;
+    width: 0px;
+    height: 0px;
+    cursor: pointer;
 }
 
 
