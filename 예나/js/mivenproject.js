@@ -1,24 +1,26 @@
-const block = document.getElementById("video")
+document.addEventListener('DOMContentLoaded', function () {
+  const video = document.getElementById('video');
 
-function onVideoEnd() {
-    console.log("영상 끝남")
-  }
+  video.addEventListener('play', function () {
+   setTimeout(function () {
+        video.classList.add('fadeOut');
+    }, 5000);
+    var element = document.getElementById("remove");
+      setTimeout(function () {
+        element.remove(); 
+      },6000);
+  });
   
-  video.addEventListener("ended",onVideoEnd)
-  $(window).on("load",function(){
-	
-    //윈도우 로드 시 비디오 플레이
-    $("#video").get(0).play();
-	
-    //작동하는지 콘솔창에서 확인
-    console.log("test");
-})
-    
-setInterval(function(){
-   if($("#video").prop("ended")){
-    
-    //영상종료 후 어떤행동을 할건지 작성
-    location.href="/html/index/index.php";
-   
-   }
-},200);
+});
+
+  let isClick=false;
+  function buttonClick(){
+  isClick = !isClick;
+  if(isClick){
+    btn.style.display="block";
+  } else {
+    btn.style.display="none";
+  }
+}
+
+const btn =document.getElementById("#Group");

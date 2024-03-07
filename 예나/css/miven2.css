@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -13,8 +14,8 @@
     background-size: cover;
     background-color: #FFFFFFE5; 
 }
-
-#바다표지{
+  
+#바다표지2{
     position: relative;
     isolation: isolate;
     width: 100%;
@@ -25,7 +26,7 @@
     background-position: center center;
 }
 
-#바다표지::after {
+#바다표지2::after {
     content: '';
     position: absolute;
     background: white;
@@ -35,7 +36,7 @@
     
   }
 
-#레이어 {
+#레이어2 {
     position: absolute;
     top: 50px;
     left: 60px;
@@ -44,7 +45,7 @@
     color: #3998FF85;
 }
 
-#Group{
+#Group2{
     position: absolute;
     top: 50px;
     right: 3%;
@@ -162,5 +163,55 @@ hr {
     cursor: pointer;
 }
 
+.change-color {
+    color:#B1AEAE;
+  }
+  
+@media screen and (max-width: 413px) {
+    /* 화면 너비가 413px 이하(모바일)인 경우에만 적용되는 스타일 */
+    body {
 
+      background-color: blue;
+    }
+    #all{
+        height: 100vh;
+        width: 100%;
+        background-color: #FFFFFFE5;
+    }
+  }
 
+  /* tablet */
+@media screen and (max-width: 720px) {
+    #all{
+        height: 100vh;
+        width: 100%;
+        background-color: #FFFFFFE5;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 540px) {
+    #all{
+        height: 100vh;
+        width: 100%;
+        background-color: #FFFFFFE5;
+    }
+    #rtg {
+        color: #3998FF85;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        width: 468px;
+        height: 872px;
+        top: 141px;
+        left: 36px;
+        border: 1px;
+    }
+    
+    h1{
+        width: 290px;
+        height: 48px;
+        top: 295px;
+        left: 125px;
+    }
+
+}
