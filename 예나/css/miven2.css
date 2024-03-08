@@ -128,13 +128,13 @@ button + button {
 }
 
 h5 {
-    width: 105px;
-    height: 29px;
+    width: 6.563rem;
+    height: 1.813rem;
     top: 23%;
     left: 45%;
     position: absolute;
     font-family: Zen Kaku Gothic New;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 300;
     line-height: 29px;
     letter-spacing: 0em;
@@ -144,7 +144,7 @@ h5 {
 hr {
     width: 65.5em;
     bottom: 6%;
-    height: 0.08px;
+    height: 0.005rem;
     border: 0;
     position: absolute;
     background-color: #68b1ff;
@@ -178,14 +178,48 @@ hr {
         width: 100%;
         background-color: #FFFFFFE5;
     }
+
+    #rtg {
+        color: #3998FF85;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        width: 468px;
+        height: 872px;
+        top: 141px;
+        left: 36px;
+        border: 1px;
+    }
+    
+    h1{
+        width: 290px;
+        height: 48px;
+        top: 295px;
+        left: 125px;
+    }
+    #btns {
+        text-align: center;
+    }
   }
 
   /* tablet */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1500px) {
     #all{
         height: 100vh;
         width: 100%;
         background-color: #FFFFFFE5;
+    }
+    #바다표지 {
+        background-position: cover;
+        overflow: hidden;
+    }
+    #btns{
+        left: 54%;
+    }
+    #icon{
+        left: 15%;
+    }
+    hr{
+        width: 100%;
     }
 }
 
@@ -213,5 +247,18 @@ hr {
         top: 295px;
         left: 125px;
     }
-
+    #btns {
+        text-align: center;
+        font-size: 1.125rem;
+    }
+    hr{
+        width: 100%;
+    }
+    #레이어2 {
+        width: 7.375rem;
+        height: 2.25rem;
+    }
+    h5{
+        font-size: 50%;
+    }
 }

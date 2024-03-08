@@ -22,5 +22,4 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.style.display="none";
   }
 }
-
 const btn =document.getElementById("#Group");
